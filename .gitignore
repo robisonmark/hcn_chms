@@ -1,6 +1,7 @@
 chms/*
 lib/*
 Scripts/*
+/.venv/
 
 # Django project
 /media/
@@ -41,3 +42,4 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+

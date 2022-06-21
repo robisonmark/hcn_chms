@@ -26,6 +26,8 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 INSTALLED_APPS = [
     'home',
     'search',
+    'about',
+    'streams',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
@@ -38,6 +40,8 @@ INSTALLED_APPS = [
     'wagtail.search',
     'wagtail.admin',
     'wagtail.core',
+    'wagtail.api.v2',
+    'wagtail_headless_preview',
 
     'modelcluster',
     'taggit',
@@ -48,6 +52,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
