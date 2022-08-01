@@ -42,6 +42,10 @@ class PageContent(Orderable):
         [
             ("paragraph", blocks.ParagraphRichTextBlock()),
             # ("table_block", blocks.TableBlock())
+            ("logo_block", blocks.LogoBlock()),
+            ('document_block', blocks.DocumentBlock())
+            
+
         ],
         null=True,
         blank=True,

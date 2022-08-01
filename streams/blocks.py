@@ -24,12 +24,15 @@ class ParagraphRichTextBlock(blocks.StructBlock):
     isHeaderLink = blocks.BooleanBlock(form_classname="Is Header a Link", required=False)
     headerLink = blocks.URLBlock(required=False)
 
-class TableBlock(blocks.StructBlock):
+class CustomTableBlock(blocks.StructBlock):
     header = blocks.CharBlock(form_classname="Section Header", required=False, blank=True)
     displayHeader = blocks.BooleanBlock(required=False)
     isHeaderLink = blocks.BooleanBlock(form_classname="Is Header a Link", required=False)
     headerLink = blocks.URLBlock(required=False)
-    content = TableBlock()
+    # content = TableBlock()
+
+class StaffBioBlock(blocks.StructBlock):
+    staffPosition = header = blocks.CharBlock(form_classname="Staff Position", required=False, blank=True)
 
 class ContentImageBlock(blocks.StructBlock):
     try:
