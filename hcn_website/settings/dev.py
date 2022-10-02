@@ -16,6 +16,10 @@ INSTALLED_APPS = INSTALLED_APPS + [
     'wagtail.contrib.styleguide',
 ]
 
+MIDDLEWARE = MIDDLEWARE + [
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
+]
+
 try:
     from .local import *
 except ImportError:

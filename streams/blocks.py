@@ -9,7 +9,6 @@ from wagtail.contrib.table_block.blocks import TableBlock
 import requests
 
 class LogoBlock(blocks.StructBlock):
-    # text = blocks.TextBlock(Required=True, help_text="Your content goes here")
     logo = ImageChooserBlock(Required=True)
 
 
@@ -24,6 +23,7 @@ class ParagraphRichTextBlock(blocks.StructBlock):
     isHeaderLink = blocks.BooleanBlock(form_classname="Is Header a Link", required=False)
     headerLink = blocks.URLBlock(required=False)
 
+
 class CustomTableBlock(blocks.StructBlock):
     header = blocks.CharBlock(form_classname="Section Header", required=False, blank=True)
     displayHeader = blocks.BooleanBlock(required=False)
@@ -31,8 +31,10 @@ class CustomTableBlock(blocks.StructBlock):
     headerLink = blocks.URLBlock(required=False)
     # content = TableBlock()
 
+
 class StaffBioBlock(blocks.StructBlock):
-    staffPosition = header = blocks.CharBlock(form_classname="Staff Position", required=False, blank=True)
+    staffPosition = blocks.CharBlock(form_classname="Staff Position", required=False, blank=True)
+
 
 class ContentImageBlock(blocks.StructBlock):
     try:
