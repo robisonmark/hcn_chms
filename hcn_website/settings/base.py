@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'wagtail.core',
     'wagtail.api.v2',
     'wagtail_headless_preview',
+    "wagtail.contrib.legacy.richtext",
 
     'modelcluster',
     'taggit',
@@ -180,4 +181,12 @@ WAGTAILSEARCH_BACKENDS = {
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
-BASE_URL = 'http://example.com'
+BASE_URL = 'http://localhost:8080'
+WAGTAILADMIN_BASE_URL = 'http://localhost:8080'
+WAGTAIL_SITE_NAME = 'Hendersonville Church of the Nazarene'
+
+WAGTAILADMIN_RICH_TEXT_EDITORS = {
+    'default': {
+        'WIDGET': 'wagtail.admin.rich_text.DraftailRichTextArea'
+    }
+}

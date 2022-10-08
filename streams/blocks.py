@@ -32,8 +32,13 @@ class CustomTableBlock(blocks.StructBlock):
     # content = TableBlock()
 
 
-class StaffBioBlock(blocks.StructBlock):
-    staffPosition = blocks.CharBlock(form_classname="Staff Position", required=False, blank=True)
+# class StaffBioBlock(blocks.StructBlock):
+#     biography = blocks.RichTextBlock(Required=False, help_text="Add the page content here")
+#     fun_facts = blocks.RichTextBlock(Required=False, help_text="Add the page content here")
+
+class MinistryLinksBlock(blocks.StructBlock): 
+    headerLink = blocks.PageChooserBlock()
+    # staffPosition = blocks.CharBlock(form_classname="Staff Position", required=False, blank=True)
 
 
 class ContentImageBlock(blocks.StructBlock):

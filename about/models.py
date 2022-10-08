@@ -47,6 +47,7 @@ class PageContent(Orderable):
             
 
         ],
+        use_json_field=False,
         null=True,
         blank=True,
     )
@@ -54,7 +55,7 @@ class PageContent(Orderable):
         FieldPanel("sectionHeader"),
         FieldPanel("displaySectionTitle"),
         FieldPanel("content"),
-        StreamFieldPanel("subsections"),
+        FieldPanel("subsections"),
     ]
 
     api_fields = [
