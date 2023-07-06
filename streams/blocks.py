@@ -1,10 +1,6 @@
-from wagtail.core import blocks
+from wagtail import blocks
 from wagtail.images.blocks import ImageChooserBlock
 from wagtail.documents.blocks import DocumentChooserBlock
-from wagtail.core.templatetags.wagtailcore_tags import richtext
-from wagtail.core.blocks import ChoiceBlock, CharBlock, URLBlock
-from wagtail.contrib.table_block.blocks import TableBlock
-
 
 import requests
 

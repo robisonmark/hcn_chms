@@ -1,7 +1,7 @@
 from django.utils.html import format_html
 from django.templatetags.static import static
 
-from wagtail.core import hooks
+import wagtail.hooks as hooks
 
 @hooks.register('insert_global_admin_css', order=100)
 def global_admin_css():

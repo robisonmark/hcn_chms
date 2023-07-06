@@ -4,8 +4,8 @@ from django.db import migrations, models
 import django.db.models.deletion
 import modelcluster.fields
 import wagtail.contrib.table_block.blocks
-import wagtail.core.blocks
-import wagtail.core.fields
+import wagtail.blocks
+import wagtail.fields
 import wagtail_headless_preview.models
 
 
@@ -37,8 +37,8 @@ class Migration(migrations.Migration):
                 ('sort_order', models.IntegerField(blank=True, editable=False, null=True)),
                 ('displaySectionTitle', models.BooleanField(default=True)),
                 ('sectionHeader', models.CharField(blank=True, max_length=150, null=True)),
-                ('content', wagtail.core.fields.RichTextField(blank=True, null=True)),
-                ('subsections', wagtail.core.fields.StreamField([('paragraph', wagtail.core.blocks.StructBlock([('header', wagtail.core.blocks.CharBlock(blank=True, form_classname='Section Header', required=False)), ('displayHeader', wagtail.core.blocks.BooleanBlock(required=False)), ('content', wagtail.core.blocks.RichTextBlock(Required=True, help_text='Add the page content here')), ('isHeaderLink', wagtail.core.blocks.BooleanBlock(form_classname='Is Header a Link', required=False)), ('headerLink', wagtail.core.blocks.URLBlock(required=False))])), ('table_block', wagtail.core.blocks.StructBlock([('header', wagtail.core.blocks.CharBlock(blank=True, form_classname='Section Header', required=False)), ('displayHeader', wagtail.core.blocks.BooleanBlock(required=False)), ('isHeaderLink', wagtail.core.blocks.BooleanBlock(form_classname='Is Header a Link', required=False)), ('headerLink', wagtail.core.blocks.URLBlock(required=False)), ('content', wagtail.contrib.table_block.blocks.TableBlock())]))], blank=True, null=True)),
+                ('content', wagtail.fields.RichTextField(blank=True, null=True)),
+                ('subsections', wagtail.fields.StreamField([('paragraph', wagtail.blocks.StructBlock([('header', wagtail.blocks.CharBlock(blank=True, form_classname='Section Header', required=False)), ('displayHeader', wagtail.blocks.BooleanBlock(required=False)), ('content', wagtail.blocks.RichTextBlock(Required=True, help_text='Add the page content here')), ('isHeaderLink', wagtail.blocks.BooleanBlock(form_classname='Is Header a Link', required=False)), ('headerLink', wagtail.blocks.URLBlock(required=False))])), ('table_block', wagtail.blocks.StructBlock([('header', wagtail.blocks.CharBlock(blank=True, form_classname='Section Header', required=False)), ('displayHeader', wagtail.blocks.BooleanBlock(required=False)), ('isHeaderLink', wagtail.blocks.BooleanBlock(form_classname='Is Header a Link', required=False)), ('headerLink', wagtail.blocks.URLBlock(required=False)), ('content', wagtail.contrib.table_block.blocks.TableBlock())]))], blank=True, null=True)),
                 ('page', modelcluster.fields.ParentalKey(on_delete=django.db.models.deletion.CASCADE, related_name='section', to='about.streamfields')),
             ],
             options={

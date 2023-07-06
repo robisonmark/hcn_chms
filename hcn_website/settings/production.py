@@ -15,7 +15,7 @@ sections = parser.sections()
 
 SECRET_KEY = parser['django']['secrets']
 USER = parser.get("DB", "user")
-NAME = parser.get("DB", "db")
+NAME = "hcn_chms"
 PASSWORD = parser.get("DB", "password")
 HOST = parser.get("DB", "host")
 PORT = parser.get("DB", 'port')
@@ -54,10 +54,10 @@ LOGGING = {
     },
 }
 
-#CORS_ALLOWED_ORIGINS = [
-#    'https://mhacsports.com'
-#]
+CORS_ALLOWED_ORIGINS = [
+   'http://localhost:3000'
+]
 
-#CSRF_TRUSTED_ORIGINS = [
-#    'https://mhacsports.com'
-#]
+CSRF_TRUSTED_ORIGINS = [
+   'http://localhost:3000'
+]

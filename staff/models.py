@@ -1,9 +1,8 @@
 from django.db import models
 
 from wagtail.api import APIField
-from wagtail.core.models import Page
-from wagtail.admin.edit_handlers import FieldPanel
-from wagtail.admin.panels import PageChooserPanel
+from wagtail.models import Page
+from wagtail.admin.panels import PageChooserPanel, FieldPanel
 from wagtail.fields import RichTextField, StreamField
 
 from streams import blocks
