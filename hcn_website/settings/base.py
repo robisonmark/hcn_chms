@@ -59,11 +59,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-
     'corsheaders'
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -71,7 +71,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
 
@@ -181,12 +180,23 @@ WAGTAILSEARCH_BACKENDS = {
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
-BASE_URL = 'http://localhost:8080'
-WAGTAILADMIN_BASE_URL = 'http://localhost:8080'
+BASE_URL = 'https://staging-hchms.robros.dev'
+WAGTAILADMIN_BASE_URL = 'https://staging-hcnchms.robros.dev'
 WAGTAIL_SITE_NAME = 'Hendersonville Church of the Nazarene'
+WAGTAILAPI_BASE_URL = 'https://staging-hcnchms.robros.dev'
 
 WAGTAILADMIN_RICH_TEXT_EDITORS = {
     'default': {
         'WIDGET': 'wagtail.admin.rich_text.DraftailRichTextArea'
     }
 }
+
+#CORS_ALLOWED_ORIGINS = [
+#   '*'
+#]
+
+#CSRF_TRUSTED_ORIGINS = [
+#   '*'
+#]
+
+CORS_ORIGIN_ALLOW_ALL = True

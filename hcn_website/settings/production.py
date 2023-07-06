@@ -32,8 +32,8 @@ DATABASES = {
     }
 }
 
-ALLOWED_HOSTS = ['.robros.dev', '138.197.100.63']
-
+# ALLOWED_HOSTS = ['localhost:3000','*.robros.dev', '138.197.100.63']
+ALLOWED_HOSTS = ['*']
 
 LOGGING = {
     'version': 1,
@@ -55,9 +55,9 @@ LOGGING = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-   'http://localhost:3000'
+   '*'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-   'http://localhost:3000'
+   '*'
 ]
