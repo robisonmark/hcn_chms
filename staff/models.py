@@ -46,6 +46,7 @@ class StaffPage(Page):
         blank=True,
     )
     email = models.CharField(null=False, blank=False, max_length=100, default='')
+    
     COMPONENT_CHOICES =  [('CircleImageStacked', 'CircleImageStacked')]
     component = models.CharField(
         max_length=50,
