@@ -24,3 +24,25 @@ This is the foundational build for a new church management software platform wor
 ## Contribute
 
 To Contribute email <info@robros.dev>
+
+## Snippets
+[Wagtail Snippets](https://docs.wagtail.org/en/v4.0.4/topics/snippets.html)
+- Content Left
+- Content Right
+- Full Width Feature
+- Subpage Hero Left
+- Subpage Hero Right
+- Content Aside Left
+- Content Aside Right
+
+## Admin Views
+[Wagtail Snippets](https://docs.wagtail.org/en/stable/extending/admin_views.html)
+- Ministries
+- Staff
+- Events | From Cove
+- Blog
+
+## Pages
+- Beliefs
+- Plan a Visit
+- Give
