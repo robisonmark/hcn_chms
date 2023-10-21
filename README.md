@@ -36,13 +36,17 @@ To Contribute email <info@robros.dev>
 - Content Aside Right
 
 ## Admin Views
-[Wagtail Snippets](https://docs.wagtail.org/en/stable/extending/admin_views.html)
+[Wagtail Snippets](https://docs.wagtail.org/en/v4.0.4/extending/admin_views.html)
 - Ministries
 - Staff
 - Events | From Cove
 - Blog
 
 ## Pages
+[Wagtail Generic Views?](https://docs.wagtail.org/en/v4.0.4/extending/generic_views.html)
 - Beliefs
 - Plan a Visit
 - Give
+
+### Registering New Admin Menu Item
+<https://docs.wagtail.org/en/v4.0.4/reference/hooks.html#construct-main-menu>
