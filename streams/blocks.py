@@ -28,9 +28,9 @@ class CustomTableBlock(blocks.StructBlock):
     # content = TableBlock()
 
 
-# class StaffBioBlock(blocks.StructBlock):
-#     biography = blocks.RichTextBlock(Required=False, help_text="Add the page content here")
-#     fun_facts = blocks.RichTextBlock(Required=False, help_text="Add the page content here")
+class StaffBioBlock(blocks.StructBlock):
+    biography = blocks.RichTextBlock(Required=False, help_text="Add the page content here")
+    fun_facts = blocks.RichTextBlock(Required=False, help_text="Add the page content here")
 
 class MinistryLinksBlock(blocks.StructBlock): 
     headerLink = blocks.PageChooserBlock()
